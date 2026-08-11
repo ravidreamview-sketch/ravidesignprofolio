@@ -1714,6 +1714,10 @@
       background: radial-gradient(120% 120% at 70% 20%, #052018, transparent), linear-gradient(150deg, #04140f, #0b0b0d)
     }
 
+    .b-lang {
+      background: radial-gradient(120% 120% at 80% 80%, #001c3d, transparent), linear-gradient(150deg, #001024, #0b0b0d)
+    }
+
     .case-mock {
       position: relative;
       z-index: 2;
@@ -2882,12 +2886,14 @@
     }
 
     .ba .before {
-      background: linear-gradient(135deg, #1a1a1e, #0d0d0f);
+      background-image: linear-gradient(135deg, #1a1a1e, #0d0d0f);
+      background-size: cover;
       color: var(--ink-faint)
     }
 
     .ba .after {
-      background: linear-gradient(135deg, #241300, #0b0b0d);
+      background-image: linear-gradient(135deg, #241300, #0b0b0d);
+      background-size: cover;
       color: var(--accent);
       clip-path: inset(0 0 0 50%)
     }
@@ -3396,6 +3402,33 @@
           </div>
         </article>
 
+        <article class="case reveal" data-d="1" data-tags="mobile saas" data-case="linguist">
+          <div class="case-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H8M17 7v9" />
+            </svg></div>
+          <div class="case-banner">
+            <div class="glow-bg b-lang"></div>
+            <div class="case-mock">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <div class="mock-line accent"></div>
+              <div class="mock-line" style="width:80%"></div>
+              <div class="mock-line" style="width:90%"></div>
+              <div class="mock-line" style="width:60%"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <span class="case-cat">Mobile · SaaS</span>
+            <h3>Unified Linguist Workspace</h3>
+            <p>A unified mobile workspace designed to bring bookings, communication, translation, and job workflows
+              together for professional interpreters.</p>
+            <div class="case-metrics">
+              <div class="m"><b>-40%</b><span>Task time</span></div>
+              <div class="m"><b>+25%</b><span>User satisfaction</span></div>
+              <div class="m"><b>5→2</b><span>Workflow steps</span></div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -3776,7 +3809,7 @@
 
         <div class="cert-card reveal">
           <div class="cert-frame">
-            <div class="placeholder">
+            <div class="placeholder" style="display:none;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="3" y="4" width="18" height="16" rx="2" />
                 <circle cx="9" cy="10" r="2" />
@@ -3784,29 +3817,17 @@
               </svg>
               <div class="mono">Add certificate image<br />replace .cert-frame img</div>
             </div>
-          </div>
+          <div class="cert-frame" data-lightbox data-cap="Generative AI · Coursera" style="display:block;">
+            <img src="img/generative.jpg" alt="Generative AI" />
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21l-4-4M11 8v6M8 11h6" />
+              </svg></span></div>
+          
           <div class="cert-body">
             <span class="cy">Google · Coursera</span>
-            <h4>Google UX Design Certificate</h4>
-            <p>Foundational & advanced UX design coursework.</p>
-          </div>
-        </div>
-
-        <div class="cert-card reveal" data-d="1">
-          <div class="cert-frame">
-            <div class="placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="4" width="18" height="16" rx="2" />
-                <circle cx="9" cy="10" r="2" />
-                <path d="M21 16l-5-5-4 4-3-3-4 4" />
-              </svg>
-              <div class="mono">Add certificate image<br />replace .cert-frame img</div>
-            </div>
-          </div>
-          <div class="cert-body">
-            <span class="cy">Interaction Design Foundation</span>
-            <h4>IDF Member · AI in UX Design</h4>
-            <p>AI in the UX Design Process & AI for UX Research.</p>
+            <h4>Generative AI Certificate</h4>
+            <p>Explore the fundamentals of generative AI, its applications in design, and ethical considerations.</p>
           </div>
         </div>
 
@@ -4191,7 +4212,7 @@
       upi: {
         cat: 'FinTech · Real-time Payments', title: 'UPI Payments Platform',
         intro: 'A unified real-time payments experience serving 40M+ monthly active users — where a single moment of friction can cost trust and transactions.',
-        before: 'Cluttered · 6 steps', after: 'Focused · 3 steps',
+        before: 'url(image/case-upi-before.jpg)', after: 'url(image/case-upi-after.jpg)',
         blocks: [['Business Problem', 'Payment drop-off at PIN and confirmation screens was eroding conversion, and inconsistent flows across bank partners created support load.'],
         ['Research', 'User interviews, session replays and funnel analysis exposed anxiety points around amount confirmation and failure states.'],
         ['Competitive Analysis', 'Benchmarked leading UPI apps to map best-in-class patterns for speed, clarity and error recovery.'],
@@ -4202,7 +4223,7 @@
       esign: {
         cat: 'RegTech · Digital Signatures', title: 'eSign Platform',
         intro: 'An Aadhaar-based digital signing experience that turns a legally dense, high-stakes task into a calm three-step flow.',
-        before: 'Legalese · Confusing', after: 'Guided · Reassuring',
+        before: 'url(image/case-esign-before.jpg)', after: 'url(image/case-esign-after.jpg)',
         blocks: [['Business Problem', 'Signing abandonment was high; users distrusted an opaque, jargon-heavy compliance flow.'],
         ['Research', 'Usability testing revealed users needed reassurance about security and a clear sense of progress.'],
         ['Information Architecture', 'Restructured the flow into consent → verify → sign, with plain-language microcopy at each step.'],
@@ -4213,7 +4234,7 @@
       cms: {
         cat: 'Enterprise · SaaS Console', title: 'Payment Gateway (CMS)',
         intro: 'A configuration and merchant-management console for power users orchestrating millions in daily transaction volume.',
-        before: 'Dense tables', 'after': 'Structured · Scannable',
+        before: 'url(image/case-cms-before.jpg)', after: 'url(image/case-cms-after.jpg)',
         blocks: [['Business Problem', 'Operators struggled with a dense admin UI, slowing onboarding and increasing errors.'],
         ['DesignOps', 'Introduced design tokens, governance and a Figma library that cut design-to-dev handoff by ~30%.'],
         ['Interaction Design', 'Designed complex data tables, bulk actions and states that stay legible under heavy load.'],
@@ -4224,13 +4245,25 @@
       bank: {
         cat: 'Mobile · Digital Banking', title: 'Digital Banking Suite',
         intro: 'Mobile-first banking apps for six PSU banks — one accessible design language flexing across many brands.',
-        before: 'Fragmented UIs', after: 'One system · Many brands',
+        before: 'url(image/case-bank-before.jpg)', after: 'url(image/case-bank-after.jpg)',
         blocks: [['Business Problem', 'Each bank had a divergent app; maintenance was costly and quality inconsistent.'],
         ['Design System', 'A themeable component library let each brand keep identity while sharing patterns.'],
         ['Validation', 'Usability testing lifted task completion; dev collaboration cut QA revision cycles.'],
         ['Craft', 'Pixel-accurate handoff and motion guidelines kept implementation faithful to design.']],
         steps: ['Overview', 'Research', 'Personas', 'Journey', 'Wireframes', 'Design System', 'Prototype', 'Usability Testing', 'Final UI', 'Impact'],
         metrics: [['+28%', 'Task completion'], ['6', 'Bank brands'], ['−25%', 'QA revisions'], ['AA', 'Accessibility']]
+      },
+      linguist: {
+        cat: 'Mobile · Productivity SaaS', title: 'Unified Linguist Workspace',
+        intro: 'A unified mobile workspace designed to bring bookings, communication, translation, and job workflows together for professional interpreters.',
+        before: 'url(img/case-linguist-before.jpg)',
+        after: 'url(img/case-linguist-after.jpg)',
+        blocks: [['Business Problem', 'Interpreters faced fragmented workflows across multiple apps for booking, communication, and translation, leading to inefficiency and errors.'],
+        ['UX Strategy', 'Consolidate core tasks into a single, intuitive mobile workspace to reduce context switching and streamline job management.'],
+        ['Feature Design', 'Designed an integrated calendar for bookings, secure in-app messaging, and a dedicated translation interface with terminology support.'],
+        ['Impact', 'The unified workspace reduced average task time and increased user satisfaction by centralizing critical tools for interpreters.']],
+        steps: ['Overview', 'User Research', 'Personas', 'Job Stories', 'IA', 'Wireframes', 'UI Design', 'Prototyping', 'Usability Testing', 'Final UI', 'Outcomes'],
+        metrics: [['-40%', 'Task time'], ['+25%', 'User satisfaction'], ['5→2', 'Core apps'], ['4.8★', 'User rating']]
       }
     };
     const modal = document.getElementById('modal'), modalBox = document.getElementById('modalBox');
@@ -4244,8 +4277,8 @@
     </div>
     <div class="modal-body">
       <div class="ba" id="ba">
-        <div class="layer before">${d.before}</div>
-        <div class="layer after" id="baAfter">${d.after}</div>
+        <div class="layer before" style="background-image: ${d.before};"></div>
+        <div class="layer after" id="baAfter" style="background-image: ${d.after};"></div>
         <div class="handle" id="baHandle"></div>
         <span class="tag l">Before</span><span class="tag r">After</span>
       </div>
