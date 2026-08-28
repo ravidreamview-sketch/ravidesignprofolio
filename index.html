@@ -3227,7 +3227,7 @@
         <div class="hero-trust"><span class="stars">★★★★★</span>Trusted by leading Banking & Payment Products</div>
 
         <div class="hero-cta">
-          <a href="#resume" class="btn primary magnetic-btn" id="dlResume" data-ripple data-cursor>Download Resume
+          <a href="Ravichandran-Selvaraj-Senior-Product-Designer.pdf" download="Ravichandran-Selvaraj-Senior-Product-Designer.pdf" class="btn primary magnetic-btn" id="dlResume" data-ripple data-cursor>Download Resume
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
             </svg></a>
@@ -3998,7 +3998,7 @@
               <path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z" />
             </svg>Portfolio</a>
         </div>
-        <a href="#resume" class="btn primary" id="dlResume2" data-ripple data-cursor>Download Resume
+        <a href="Ravichandran-Selvaraj-Senior-Product-Designer.pdf" download="Ravichandran-Selvaraj-Senior-Product-Designer.pdf" class="btn primary" id="dlResume2" data-ripple data-cursor>Download Resume
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
           </svg></a>
@@ -4409,9 +4409,14 @@
 
     /* ---------- resume ---------- */
     function triggerResume() {
-      // Replace '#' with your hosted PDF/CV URL when deploying.
-      const url = 'https://www.ravidesignhub.com';
-      window.open(url, '_blank');
+      const resumeUrl = 'Ravichandran-Selvaraj-Senior-Product-Designer.pdf';
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = 'Ravichandran-Selvaraj-Senior-Product-Designer.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
     document.getElementById('dlResume').addEventListener('click', e => { e.preventDefault(); triggerResume() });
     document.getElementById('dlResume2').addEventListener('click', e => { e.preventDefault(); triggerResume() });
